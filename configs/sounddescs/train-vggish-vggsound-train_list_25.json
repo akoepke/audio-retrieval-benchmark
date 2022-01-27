@@ -1,0 +1,11 @@
+{
+    "inherit_from": "configs/data_loader_sounddescs.json",
+    "experts": {
+        "modalities": [
+            "audio",
+            "vggsound"
+        ]
+    },
+    "testing_file": "test_list.txt",
+    "training_file": "train_list_25.txt"
+}

@@ -1,0 +1,12 @@
+data/AudioCaps/structured-symlinks/aggregated_audio/vggish-raw.hickle
+data/AudioCaps/structured-symlinks/aggregated_imagenet_25fps_256px_stride1_offset0/resnext101_32x48d-avg.pickle
+data/AudioCaps/structured-symlinks/aggregated_pann/pann-raw.hickle
+data/AudioCaps/structured-symlinks/aggregated_r2p1d_30fps_256px_stride32_offset0_inner_stride1/r2p1d-ig65m-avg.pickle
+data/AudioCaps/structured-symlinks/aggregated_scene_25fps_256px_stride1_offset0/densenet161-avg.pickle
+data/AudioCaps/structured-symlinks/aggregated_syncnet/syncnet-raw.hickle
+data/AudioCaps/structured-symlinks/aggregated_vggsound/vggsound-raw.hickle
+data/AudioCaps/structured-symlinks/filtered_val_list.txt
+data/AudioCaps/structured-symlinks/final_filtered_test_list.txt
+data/AudioCaps/structured-symlinks/structured-symlinks/raw-captions.pkl
+data/AudioCaps/structured-symlinks/text_embeddings/w2v.pkl
+data/AudioCaps/structured-symlinks/train_list.txt

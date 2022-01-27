@@ -1,0 +1,18 @@
+{
+    "recipe": "gpu-proc",
+    "partition": "gpu",
+    "time_limit": "96:00:00",
+    "gen_script_dir": "data/slurm-gen-scripts",
+    "mem": "100G",
+    "gpus_per_task": 1,
+    "cpus_per_task": 5,
+    "throttle_array": 20,
+    "ssh_forward": "",
+    "log_dir": "data/slurm-logs",
+    "use_custom_ray_tmp_dir": false,
+    "refresh_logs": false,
+    "exclude": "gnodef1,gnodee7,gnodef2,gnodee1,gnodee2,gnodee3,gnodee4,gnodee5,gnodee6,gnodee8,gnodeb1,gnodeb2,gnodeb3,gnodeb4,gnodeb5,gnodec1,gnodec2,gnodec3,gnodec4,gnodec5,gnodej1",
+    "constraint_str": "",
+    "prep": "",
+    "env_setup": "export PYTHONPATH=\"${BASE}\":$PYTHONPATH; export PATH=\"${HOME}\"/local/anaconda3/condabin/:$PATH; source ~/local/anaconda3/etc/profile.d/conda.sh; conda activate pt37"
+}

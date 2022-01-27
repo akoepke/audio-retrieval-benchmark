@@ -1,0 +1,83 @@
+{
+    "inherit_from": "configs/base_config.json",
+    "eval_mode": "test_run",
+    "experts": {
+        "face_dim": 512,
+        "text_feat": "w2v",
+        "modalities": [
+            "imagenet.resnext101_32x48d.0",
+            "imagenet.senet154.0",
+            "scene.densenet161.0",
+            "r2p1d.r2p1d-ig65m.0",
+            "i3d.i3d.0",
+            "face",
+            "ocr",
+            "audio",
+            "speech"
+        ]
+    },
+    "arch": {
+        "args": {
+            "test_caption_mode": "indep",
+            "use_ce": "pairwise",
+            "use_mish": 1,
+            "use_bn_reason": 1,
+            "num_g_layers": 3,
+            "num_h_layers": 0,
+            "include_self": 1,
+            "l2renorm": false,
+            "randomise_feats": "",
+            "vlad_clusters": {
+                "text": 20,
+                "audio": 16
+            },
+            "ghost_clusters": {
+                "text": 1
+            }
+        }
+    },
+    "data_loader": {
+        "args":{
+            "dataset_name": "ActivityNet",
+            "root_feat_folder": "structured-symlinks",
+            "data_dir": "data/activity-net",
+            "split_name": "val1",
+            "batch_size": 128,
+            "fuse_captions": true,
+            "num_test_captions": 1,
+            "max_tokens": {
+                "text": 20,
+                "audio": 29
+            }
+        }
+    },
+    "trainer": {
+        "epochs": 40
+    },
+    "optimizer": {
+        "type": "Ranger",
+        "args":{
+            "lr": 0.1,
+            "weight_decay": 1e-3
+        }
+    },
+    "loss": {
+        "type": "MaxMarginRankingLoss",
+        "args": {
+            "margin": 0.060496613740311816,
+            "fix_norm": true
+        }
+    },
+    "eval_settings": {
+        "data_loader": {
+            "args":{
+                "split_name": "val1"
+            }
+        },
+        "tester": {
+            "save_dir": "data/saved/",
+            "verbosity": 2
+        },
+        "disable_gpu": true
+    }
+}

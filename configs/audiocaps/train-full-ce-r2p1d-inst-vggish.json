@@ -1,0 +1,12 @@
+{
+    "inherit_from": "configs/data_loader_audiocaps.json",
+    "experts": {
+        "modalities": [
+            "audio",
+            "r2p1d.r2p1d-ig65m.0",
+            "imagenet.resnext101_32x48d.0"
+        ]
+    },
+    "testing_file": "final_filtered_test_list.txt",
+    "training_file": "train_list.txt"
+}

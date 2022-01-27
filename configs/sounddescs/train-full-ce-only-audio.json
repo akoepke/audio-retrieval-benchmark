@@ -1,0 +1,16 @@
+{
+    "inherit_from": "configs/data_loader_sounddescs.json",
+    "experts": {
+        "modalities": [
+            "audio"
+        ]
+    },
+    "arch": {
+        "type": "CENet",
+        "args": {
+            "use_ce": "",
+            "mimic_ce_dims": 1
+        }
+    },
+    "testing_file": "test_list.txt"
+}

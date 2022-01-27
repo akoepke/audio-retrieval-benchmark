@@ -1,0 +1,11 @@
+data/QuerYD/structured-symlinks/aggregated_audio/vggish-raw.hickle
+data/QuerYD/structured-symlinks/aggregated_imagenet_25fps_256px_stride1_offset0/resnext101_32x48d-avg.pickle
+data/QuerYD/structured-symlinks/aggregated_r2p1d_30fps_256px_stride32_offset0_inner_stride1/r2p1d-ig65m-avg.pickle
+data/QuerYD/structured-symlinks/aggregated_s3dg_10fps_256px_stride16_offset0_inner_stride1/s3dg-avg-logits.pickle
+data/QuerYD/structured-symlinks/aggregated_scene_25fps_256px_stride1_offset0/densenet161-avg.pickle
+data/QuerYD/structured-symlinks/raw_captions_combined_filtered.pkl
+data/QuerYD/structured-symlinks/text_embeddings/howto100m_mil_nce.pkl
+data/QuerYD/structured-symlinks/text_embeddings/w2v.pkl
+data/QuerYD/structured-symlinks/test_list.txt
+data/QuerYD/structured-symlinks/train_list.txt
+data/QuerYD/structured-symlinks/val_list.txt

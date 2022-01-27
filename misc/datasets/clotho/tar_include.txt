@@ -1,0 +1,9 @@
+data/CLOTHO/structured-symlinks/aggregated_audio/vggish-raw.hickle
+data/CLOTHO/structured-symlinks/aggregated_pann/pann-raw.hickle
+data/CLOTHO/structured-symlinks/aggregated_syncnet/syncnet-raw.hickle
+data/CLOTHO/structured-symlinks/aggregated_vggsound/vggsound-raw.hickle
+data/CLOTHO/structured-symlinks/structured-symlinks/raw-captions.pkl
+data/CLOTHO/structured-symlinks/test_list.txt
+data/CLOTHO/structured-symlinks/text_embeddings/w2v.pkl
+data/CLOTHO/structured-symlinks/train_list.txt
+data/CLOTHO/structured-symlinks/val_list.txt

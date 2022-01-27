@@ -1,0 +1,16 @@
+*.png
+
+# Ignore log files
+__pycache__
+data
+data_slurm
+exps
+exps_slurm
+logs
+audios
+error_files
+zip_audios
+mmt/__pycache__
+mmt/exps_slurm
+mmt/exps
+logs_eval

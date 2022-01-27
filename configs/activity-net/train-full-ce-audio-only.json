@@ -1,0 +1,32 @@
+{
+    "inherit_from": "configs/data_loader_activity-net.json",
+    "experts": {
+        "modalities": [
+            "audio"
+        ]
+    },
+    "arch": {
+        "type": "CENet",
+        "args": {
+            "use_ce": "",
+            "mimic_ce_dims": 1
+        }
+    },
+    "trainer": {
+        "epochs": 20
+    },
+    "optimizer": {
+        "type": "Ranger",
+        "args": {
+            "lr": 0.01,
+            "weight_decay": 1E-03
+        }
+    },
+    "loss": {
+        "type": "MaxMarginRankingLoss",
+        "args": {
+            "margin": 0.2,
+            "fix_norm": true
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+
+    "queryd-train-full-ce": ["c50d3616", "2021-05-28_15-24-39"],
+    "queryd-train-full-ce-only-scene": ["766c0b81", "2021-05-28_15-39-29"],
+    "queryd-train-full-ce-only-scene-audio": ["e576753f", "2021-05-28_16-20-15"],
+    "queryd-train-full-ce-only-scene-audio-inst": ["e40f68bf", "2021-05-28_16-21-50"],
+    "queryd-train-full-ce-only-scene-audio-inst-r2p1d": ["54ca249c", "2021-05-28_16-24-04"],
+    "queryd-train-full-mnnet": ["7e1a7420", "2021-05-28_16-38-33"],
+    "queryd-train-full-moee": ["ab5db961", "2021-05-28_15-32-38"],
+
+    "querydsegments-train-full-ce": ["0d1b703c", "2021-05-28_15-26-57"],
+    "querydsegments-train-full-mnnet": ["1404fc28", "2021-05-28_16-38-32"],
+    "querydsegments-train-full-moee": ["7b3b466e", "2021-05-28_15-32-44"]
+
+
+}

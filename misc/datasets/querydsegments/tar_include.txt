@@ -1,0 +1,6 @@
+data/QuerYDSegments/structured-symlinks/aggregated_audio/vggish-raw.hickle
+data/QuerYDSegments/structured-symlinks/structured-symlinks/split_raw_captions_filtered.pkl
+data/QuerYDSegments/structured-symlinks/test_list.txt
+data/QuerYDSegments/structured-symlinks/text_embeddings/w2v.pkl
+data/QuerYDSegments/structured-symlinks/train_list.txt
+data/QuerYDSegments/structured-symlinks/val_list.txt

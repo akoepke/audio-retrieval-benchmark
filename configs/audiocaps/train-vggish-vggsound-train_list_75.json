@@ -1,0 +1,1 @@
+{"inherit_from": "configs/data_loader_audiocaps.json", "experts": {"modalities": ["audio", "vggsound"]}, "testing_file": "final_filtered_test_list.txt", "training_file": "train_list_75.txt"}

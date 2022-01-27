@@ -1,0 +1,17 @@
+{
+    "inherit_from": "configs/data_loader_audiocaps.json",
+    "experts": {
+        "modalities": [
+            "audio",
+            "vggsound"
+        ]
+    },
+    "arch": {
+        "type": "CENet",
+        "args": {
+            "use_ce": ""
+        }
+    },
+    "testing_file": "final_filtered_test_list.txt",
+    "training_file": "train_list.txt"
+}

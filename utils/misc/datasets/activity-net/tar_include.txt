@@ -1,0 +1,7 @@
+data/activity-net/structured-symlinks/aggregated_audio/vggish-audio-raw.pickle
+data/activity-net/structured-symlinks/aggregated_facefeats_25fps_256px_stride1/face-avg.pickle
+data/activity-net/structured-symlinks/aggregated_ocr_feats/ocr-w2v.pkl
+data/activity-net/structured-symlinks/aggregated_text_feats/w2v.pkl
+data/activity-net/structured-symlinks/raw-captions-train-val_1.pkl
+data/activity-net/structured-symlinks/train_list.txt
+data/activity-net/structured-symlinks/val_1_list.txt
