@@ -19,7 +19,7 @@ pip install -r requirements.txt
 conda install -c conda-forge ffmpeg
 ```
 
-To be able to run the code below, features extracted from various datasets need to be downloaded. If there is not enough space in your working location to store some of these features (for SoundDescs and AudioCaps the files are larger than 6GB while the others are under 1GB) then you will need to create a folder called `data` inside this repository which should be a symlink to a folder where enogh memory exists. As an example, run the following from the audio-experts code-base.
+To be able to run the code below, features extracted from various datasets need to be downloaded. If there is not enough space in your working location to store some of these features (for SoundDescs and AudioCaps the files are larger than 6GB while the others are under 1GB) then you will need to create a folder called `data` inside this repository which should be a symlink to a folder where enogh memory exists. As an example, run the following from the audio-retrieval-benchmark base directory:
 ```
 ln -s <path-where-data-can-be-saved> data
 ```
@@ -40,7 +40,7 @@ This is a tool to allow for easy download of audio files and text information fr
 First download the download_links_renamed.txt or, if needed, the download_links.txt file. Save it in the folder that will be used for downloading audios. To be able to download the files the --download_folder flag must be set when running the commands below.
 
 
-To only download a few audio files to begin with, use the --limit flag with non-zero values.\
+To only download a few audio files, use the --limit flag with non-zero values.
 
 To download audio files in zip form for the SoundDescs dataset simply run the line below. To download multiple files at the same time use the processes flag. We recommend not using more than two processes to avoid being blocked by the website.
 ```
