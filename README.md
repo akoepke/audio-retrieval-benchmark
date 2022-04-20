@@ -135,7 +135,7 @@ For example, to train MMT on the CLOTHO dataset, run the following sequence of c
 python3 misc/sync_experts.py --dataset CLOTHO
 
 # Train MMT on CLOTHO
-python -m mmt/train --config mmt/configs/clotho/Clotho_mmt.json
+python mmt/train.py --config mmt/configs/Clotho_mmt.json
 ```
 
 ### AudioCaps
@@ -258,11 +258,11 @@ If you find this code useful, please consider citing [1,2,3,4].
 
 [1]
 ```
-@inproceedings{Koepke2021,
+@inproceedings{Koepke2022,
     author    = {Koepke, A.S. and Oncescu, A.-M. and Henriques, J. and Akata, Z. and Albanie, S.},
     title     = {Audio Retrieval with Natural Language Queries: A Benchmark Study},
-    booktitle = {arXiv preprint arXiv:2112.09418},
-    year      = {2021}
+    booktitle = {IEEE Transactions on Multimedia},
+    year      = {2022}
 }
 ```
 
