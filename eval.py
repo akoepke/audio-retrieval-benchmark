@@ -19,7 +19,7 @@ def extracting_log_info(log_files, experiment, logging):
     
     for file_name in log_files:        
         output_string = f"{experiment}:\n"
-        with open(Path("logs_eval") / file_name, 'r') as f:
+        with open(Path("./logs_eval") / file_name, 'r') as f:
             content_lines = f.read().splitlines()
         content_lines = content_lines[-14:]
         for line in content_lines:
@@ -46,7 +46,7 @@ def run_exp(experiments, logging):
 
 
 def download_configs(experiment, trained_model_path, group_id, seed, timestamp):
-    new_folder = str(trained_model_path).split('/trained_model.pth')[0]
+    new_folder = trained_model_path.parent
     url_config = f"http://www.robots.ox.ac.uk/~vgg/research/collaborative-experts/data/models/{experiment}/{group_id}/{seed}/{timestamp}/config.json"
     config_path = Path(new_folder) / 'config.json'
     wget.download(url_config, out=str(config_path))
@@ -59,16 +59,16 @@ def download_configs(experiment, trained_model_path, group_id, seed, timestamp):
 
 def download_models(experiment, logging, trained_model_path,
                     group_id, seed, timestamp):
-    new_folder = str(trained_model_path).split('/trained_model.pth')[0]
+    new_folder = trained_model_path.parent
     if os.path.exists(trained_model_path) is False:
         logging.info(f"Downloading model for {seed} since it does not exist on the local machine")
         url = f"http://www.robots.ox.ac.uk/~vgg/research/collaborative-experts/data/models/{experiment}/{group_id}/{seed}/{timestamp}/trained_model.pth"
         # import pdb; pdb.set_trace()
-        Path(new_folder).mkdir(exist_ok=True, parents=True)
+        new_folder.mkdir(exist_ok=True, parents=True)
         wget.download(url, out=str(trained_model_path))
     else:
         logging.info(f"Model already downloaded for {experiment} seed {seed}")
-    if os.path.exists(Path(new_folder) / 'config.json') is False:
+    if os.path.exists(new_folder / 'config.json') is False:
         download_configs(experiment, trained_model_path, group_id, seed, timestamp)
     else:
         logging.info(f"Config already downloaded for {experiment} seed {seed}")
@@ -98,7 +98,10 @@ def run_one_exp(experiment, experiments, logging):
             download_models(experiment, logging, trained_model_path,
                             group_id, seed, timestamp)
             config_path = group_id_path / seed / timestamp / 'config.json'
-            cmd = f"python test.py --config {config_path} --resume {trained_model_path} --device 0 --eval_from_training_config >&1 | tee logs_eval/log_{group_id}_{seed}.txt"
+
+            cmd = f"python test.py --config {config_path} --resume {trained_model_path} --device 0 --eval_from_training_config 2>&1 | tee logs_eval/log_{group_id}_{seed}.txt"
+            # if using windows, comment the line above and uncomment the line below
+            # cmd = f"python test.py --config {config_path} --resume {trained_model_path} --device 0 --eval_from_training_config 2>&1 | wtee logs_eval/log_{group_id}_{seed}.txt"
             
             log_files.append(f"log_{group_id}_{seed}.txt")
             logging.info(cmd)

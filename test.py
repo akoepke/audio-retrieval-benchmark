@@ -4,7 +4,13 @@ import random
 import logging
 import argparse
 from typing import Tuple, Dict
-from pathlib import Path
+from pathlib import Path, PurePosixPath
+import pathlib
+
+# uncomment the two lines below if using Windows
+# temp = pathlib.PosixPath
+# pathlib.PosixPath = pathlib.WindowsPath
+
 
 import numpy as np
 import torch

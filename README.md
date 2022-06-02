@@ -98,6 +98,7 @@ python eval.py --experiment audiocaps-train-full-ce-r2p1d-inst-vggish-vggsound
 
 If the --experiment flag is not provided, the `eval.py` script will download and evaluate all CE and MoEE models on the test set.
 
+#### For Windows users only, follow these instructions: [windows info](misc/windows_info.md)
 
 ### Training a new model
 
