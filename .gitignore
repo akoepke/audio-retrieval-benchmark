@@ -2,7 +2,6 @@
 
 # Ignore log files
 __pycache__
-data
 data_slurm
 exps
 exps_slurm
